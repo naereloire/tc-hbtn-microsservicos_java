@@ -9,23 +9,27 @@ import java.util.List;
 @RestController
 public class SongController {
 
+  private final SongRepository songRepository;
+
+  public SongController(SongRepository songRepository) {
+    this.songRepository = songRepository;
+  }
+
   @GetMapping("/welcome")
   @Autowired
   private String mensagemBoasVindas() {
-    return "Bem vindo %s!";
+    return "Bem vindo!";
   }
 
   @ResponseBody
   @GetMapping(path = "/allSongs")
   public List<Song> getAllSongs() {
-    Song song = new Song(1, "like a virgin", "Madonna", "Like a Virgin", "1984");
-    return Arrays.asList(song, song, song);
+    return null;
   }
 
   @GetMapping(path = "/findSong/{id}")
   public Song findSongById(@PathVariable Integer id) {
-    // TODO
-    return null;
+    return songRepository.getSongById(id);
   }
 
   @PostMapping(path = "/addSong", consumes = "application/json", produces = "application/json")

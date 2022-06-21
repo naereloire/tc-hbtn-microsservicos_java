@@ -14,8 +14,7 @@ public class SongRepository {
   }
 
   public Song getSongById(Integer id) {
-    // TODO
-    return null;
+    return list.stream().filter(song -> song.getId().equals(id)).findAny().orElse(null);
   }
 
   public void addSong(Song s) {
