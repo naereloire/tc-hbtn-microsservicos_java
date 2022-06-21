@@ -24,12 +24,17 @@ public class SongRepository {
   }
 
   public void updateSong(Song s) {
+    Song result = getSongById(s.getId());
     if (list.contains(s)) {
-      list.add(s);
+      int index = list.indexOf(result);
+      list.set(index, s);
     }
   }
 
   public void removeSong(Song s) {
-    list.remove(s);
+    Song result = getSongById(s.getId());
+    if (list.contains(s)) {
+      list.remove(result);
+    }
   }
 }
