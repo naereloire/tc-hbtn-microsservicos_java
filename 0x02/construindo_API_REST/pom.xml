@@ -9,9 +9,9 @@
         <!--  lookup parent from repository  -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>Song</artifactId>
+    <artifactId>SongAPI</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>song-api</name>
+    <name>SongAPI-</name>
     <description>Song project Spring Boot</description>
     <properties>
         <java.version>11</java.version>

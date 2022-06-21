@@ -23,7 +23,7 @@ public class SongController {
   @ResponseBody
   @GetMapping(path = "/allSongs")
   public List<Song> getAllSongs() {
-    return null;
+    return songRepository.getAllSongs();
   }
 
   @GetMapping(path = "/findSong/{id}")
