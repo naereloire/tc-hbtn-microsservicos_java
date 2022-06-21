@@ -18,14 +18,18 @@ public class SongRepository {
   }
 
   public void addSong(Song s) {
-    // TODO
+    if (!list.contains(s)) {
+      list.add(s);
+    }
   }
 
   public void updateSong(Song s) {
-    // TODO
+    if (list.contains(s)) {
+      list.add(s);
+    }
   }
 
   public void removeSong(Song s) {
-    // TODO
+    list.remove(s);
   }
 }
