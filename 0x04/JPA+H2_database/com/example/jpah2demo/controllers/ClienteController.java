@@ -33,7 +33,7 @@ public class ClienteController {
   public ResponseEntity<Cliente> findClientById(@PathVariable("id") Long idClient) {
     return clienteRepository
         .findById(idClient)
-        .map(r -> ResponseEntity.ok().body(r))
+        .map(c -> ResponseEntity.ok().body(c))
         .orElse(ResponseEntity.notFound().build());
   }
 
