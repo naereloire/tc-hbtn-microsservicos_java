@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "29a14c1f-a68f-446c-b292-95d65bb8b6bb",
+		"name": "CLIENTES API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ADD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":1,\n    \"nome\":\"Madonna\",\n    \"idade\":50,\n    \"email\":\"madonna@madonna.com\",\n    \"telefone\":[{\n        \"id\":1,\n        \"ddd\":\"11\",\n        \"numero\":\"12345\"\n    }],\n    \"endereco\":[{\n      \"id\":1,\n      \"logradouro\":\"rua\",\n      \"endereco\":\"milton goncalves\",\n      \"numero\":\"7\",\n      \"bairro\":\"estrelas\",\n      \"cidade\":\"sao paulo\",\n      \"estado\":\"sp\",\n      \"cep\":\"3456-321\"\n\n    }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api-jpa-h2/addClient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api-jpa-h2",
+						"addClient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FIND_ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api-jpa-h2/findAllClients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api-jpa-h2",
+						"findAllClients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FIND_BY_ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api-jpa-h2/findClientById/?id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api-jpa-h2",
+						"findClientById",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_BY_ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api-jpa-h2/removeClientById/?id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api-jpa-h2",
+						"removeClientById",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":1,\n    \"nome\":\"Madonna\",\n    \"idade\":50,\n    \"email\":\"madonna@madonna.com\",\n    \"telefone\":[{\n        \"id\":1,\n        \"ddd\":\"11\",\n        \"numero\":\"12345\"\n    }],\n    \"endereco\":[{\n      \"id\":1,\n      \"logradouro\":\"rua\",\n      \"endereco\":\"milton goncalves\",\n      \"numero\":\"7\",\n      \"bairro\":\"estrelas\",\n      \"cidade\":\"sao paulo\",\n      \"estado\":\"sp\",\n      \"cep\":\"3456-321\"\n\n    }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api-jpa-h2/updateClientById/?id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api-jpa-h2",
+						"updateClientById",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -15,6 +15,7 @@
 	<description>Projeto Demo usando Spring Boot JPA + H2 Database</description>
 	<properties>
 		<java.version>11</java.version>
+		<start-class>com.example.jpah2demo.JpaH2DemoApplication.main</start-class>
 	</properties>
 	<dependencies>
 		<dependency>
