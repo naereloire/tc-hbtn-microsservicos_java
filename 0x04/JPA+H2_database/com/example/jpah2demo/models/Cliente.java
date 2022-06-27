@@ -12,6 +12,7 @@ import java.util.Objects;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "cliente")
 @Entity
 public class Cliente {
   @Id
@@ -28,12 +29,14 @@ public class Cliente {
   @Column(name = "email", nullable = false)
   private String email;
 
-  @OneToMany
+  @OneToMany(cascade = CascadeType.ALL)
   @JoinColumn(name = "telefone_id", referencedColumnName = "id")
+  @ToString.Exclude
   private List<Telefone> telefoneList;
 
-  @OneToMany
+  @OneToMany(cascade = CascadeType.ALL)
   @JoinColumn(name = "endereco_id", referencedColumnName = "id")
+  @ToString.Exclude
   private List<Endereco> enderecoList;
 
   @Override
