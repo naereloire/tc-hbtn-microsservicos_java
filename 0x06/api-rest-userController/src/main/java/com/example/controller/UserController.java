@@ -1,4 +1,4 @@
-package com.example.user.controller;
+package src.main.java.com.example.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     private static final Object CPF = null;
 
-    @GetMapping("/user-id/{id}")
+    @GetMapping("/com-id/{id}")
     public String findUserById(@PathVariable int id) {
 
         String msg = "";
@@ -18,7 +18,7 @@ public class UserController {
         return msg;
     }
 
-    @GetMapping("/user-name/{userName}")
+    @GetMapping("/com-name/{userName}")
     public String findUserByName(@PathVariable String userName) {
 
         String msg = "";
@@ -26,7 +26,7 @@ public class UserController {
         return msg;
     }
 
-    @GetMapping("/user-cpf/{cpf}")
+    @GetMapping("/com-cpf/{cpf}")
     public String findUserByCPF(@PathVariable String cpf) {
 
         String msg = "";

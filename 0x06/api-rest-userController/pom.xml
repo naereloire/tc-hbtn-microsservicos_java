@@ -15,7 +15,7 @@
     <description>Projeto user-api</description>
     <properties>
         <java.version>11</java.version>
-        <start-class>com.example.user.UserApiApplication.main</start-class>
+        <start-class>src.main.java.com.UserApiApplication.main</start-class>
     </properties>
     <dependencies>
         <dependency>
