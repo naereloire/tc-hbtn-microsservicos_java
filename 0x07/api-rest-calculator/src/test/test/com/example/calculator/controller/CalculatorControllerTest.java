@@ -1,4 +1,4 @@
-package java.com.example.calculator.controller;
+package com.example.calculator.controller;
 
 import com.example.calculator.controller.CalculatorController;
 import org.junit.jupiter.api.Test;
