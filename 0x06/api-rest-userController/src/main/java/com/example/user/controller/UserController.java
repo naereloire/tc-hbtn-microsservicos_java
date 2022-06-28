@@ -1,5 +1,8 @@
 package src.main.java.com.example.user.controller;
 
+import com.example.user.exception.CPFException;
+import com.example.user.exception.UserIdException;
+import com.example.user.exception.UserNameException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +19,7 @@ public class UserController {
         if (id > 0 && id < 100) {
             msg = "You have entered valid ID";
         }
-        return msg;
+      throw new UserIdException();
     }
 
     @GetMapping("/com-name/{userName}")
@@ -25,7 +28,7 @@ public class UserController {
         if (userName.length() > 3 && userName.length() < 15) {
             msg = "You have entered valid USERNAME";
         }
-        return msg;
+        throw new UserNameException();
     }
 
     @GetMapping("/com-cpf/{cpf}")
@@ -34,7 +37,7 @@ public class UserController {
         if (cpf.length() > 3 && cpf.length() < 15) {
             msg = "You have entered valid CPF";
         }
-        return msg;
+        throw new CPFException();
     }
 
     public boolean isCPF(String CPF) {
