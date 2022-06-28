@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDate;
 
 @RestController
-@RequestMapping(value = "/calculator")
+@RequestMapping(value = "/model")
 public class CalculatorController {
 
   @GetMapping("/welcome")

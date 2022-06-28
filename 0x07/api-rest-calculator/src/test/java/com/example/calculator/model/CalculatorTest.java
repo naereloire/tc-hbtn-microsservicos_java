@@ -8,11 +8,11 @@ class CalculatorTest {
   Calculator calculator;
 
   @BeforeEach
-  void setup(){
+  void setup() {
     calculator = new Calculator();
   }
 
-  @Test
+  @org.testng.annotations.Test
   void sumTest() {
     // TODO
   }
