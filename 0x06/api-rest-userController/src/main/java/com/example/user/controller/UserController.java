@@ -12,28 +12,29 @@ public class UserController {
 
     @GetMapping("/com-id/{id}")
     public String findUserById(@PathVariable int id) {
-
-        String msg = "";
-        // TODO
+        String msg = "You have entered invalid ID";
+        if (id > 0 && id < 100) {
+            msg = "You have entered valid ID";
+        }
         return msg;
     }
 
     @GetMapping("/com-name/{userName}")
     public String findUserByName(@PathVariable String userName) {
-
-        String msg = "";
-        // TODO
+        String msg = "You have entered invalid USERNAME";
+        if (userName.length() > 3 && userName.length() < 15) {
+            msg = "You have entered valid USERNAME";
+        }
         return msg;
     }
 
     @GetMapping("/com-cpf/{cpf}")
     public String findUserByCPF(@PathVariable String cpf) {
-
-        String msg = "";
-//        boolean isCPFValid = isCPF(String CPF);
-        // TODO
+        String msg = "You have entered invalid CPF";
+        if (cpf.length() > 3 && cpf.length() < 15) {
+            msg = "You have entered valid CPF";
+        }
         return msg;
-
     }
 
     public boolean isCPF(String CPF) {

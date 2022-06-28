@@ -1,4 +1,4 @@
-package src.main.java.com.example.user.exception;
+package com.example.user.exception;
 
-public class UserNameException {
+public class UserNameException extends RuntimeException {
 }

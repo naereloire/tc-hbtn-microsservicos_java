@@ -1,4 +1,4 @@
-package src.main.java.com.example.user.exception;
+package com.example.user.exception;
 
 import lombok.*;
 
