@@ -1,8 +1,17 @@
-package com.example.calculator.model;
+package java.com.example.calculator.model;
 
+import com.example.calculator.model.Calculator;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class CalculatorTest {
+  Calculator calculator;
+
+  @BeforeEach
+  void setup(){
+    calculator = new Calculator();
+  }
+
   @Test
   void sumTest() {
     // TODO
