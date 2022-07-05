@@ -4,6 +4,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Repository
 public class ProductRepository {
@@ -14,8 +15,12 @@ public class ProductRepository {
         return list;
     }
 
-    public Product getProductById(Integer id) {
-        return list.stream().filter(product -> product.getId().equals(id)).findAny().orElse(null);
+    public Product getProductById(Long id) {
+        List<Product> result = list.stream().filter(product -> product.getId().equals(id)).collect(Collectors.toList());
+        if (!result.isEmpty()) {
+            return result.get(0);
+        }
+        return null;
     }
 
     public void addProduct(Product s) {
@@ -25,7 +30,7 @@ public class ProductRepository {
     }
 
     public void updateProduct(Product s) {
-        Product productId = getProductById(Math.toIntExact(s.getId()));
+        Product productId = getProductById((long) Math.toIntExact(s.getId()));
         if (list.contains(s)) {
             int index = list.indexOf(productId);
             list.set(index, s);
@@ -33,7 +38,7 @@ public class ProductRepository {
     }
 
     public void removeProduct(Product s) {
-        Product productId = getProductById(Math.toIntExact(s.getId()));
+        Product productId = getProductById((long) Math.toIntExact(s.getId()));
         if (list.contains(s)) {
             list.remove(productId);
         }
